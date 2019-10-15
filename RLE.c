@@ -65,7 +65,8 @@ void encode(char c[]){
     exit(0);
 }
 void decode(char c[]){
-
+    int i;
+    int j;
     for (i = 0; i < strlen(c); i = i + 2){
         if ((c[i] != 'A' && c[i] != 'C' && c[i] != 'T' && c[i] != 'G' ) && ((int)(c[i+1])< 0 || (int)(c[i+1])> 9 )){
             printf("Error: String could not be decoded");
@@ -75,9 +76,9 @@ void decode(char c[]){
 
     for (i = 0; i < strlen(c);i = i + 2){
         int times = (int)(c[i+1]) - 48;
-	for (j = 0; j < times;j++){
-	    printf("%c", c[i]);
-	}
+	    for (j = 0; j < times;j++){
+	        printf("%c", c[i]);
+	    }
     }
     exit(0);
 }
