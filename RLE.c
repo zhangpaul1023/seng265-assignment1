@@ -2,6 +2,9 @@
 #include <unistd.h>
 #include <string.h>
 #include <ctype.h>
+/*Shuhao Zhang
+  Using std=c99 decode
+*/
 
 int main(int argc, char **argv){
     char str1[40];
