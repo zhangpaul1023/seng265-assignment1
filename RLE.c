@@ -3,7 +3,7 @@
 #include <string.h>
 #include <ctype.h>
 /*Shuhao Zhang
-  Using std=c99 decode
+  V00929523
 */
 
 int main(int argc, char **argv){
