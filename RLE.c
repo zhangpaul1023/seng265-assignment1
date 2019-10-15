@@ -7,6 +7,7 @@
 */
 
 int main(int argc, char **argv){
+    int i;
     char str1[40];
     if (argc < 3){
         printf("Error: No input file specified!");
@@ -25,7 +26,7 @@ int main(int argc, char **argv){
         exit(2);
     }
     fgets(str1, sizeof(char) * 40 , filePointer);
-    for (int i = 0; i < strlen(str1); i++){
+    for (i = 0; i < strlen(str1); i++){
         if ((str1[i] == ' ' && str1[i+1] != ' ') || (str1[i] != 'A' && str1[i] != 'C' && str1[i] != 'T'  && str1[i] != 'G' && str1[i] > '9')){
             printf("Error: Invalid format");
             exit(3);
@@ -44,16 +45,16 @@ int main(int argc, char **argv){
 void encode(char c[]){
    
     int count = 1;
-
-    for (int i = 0; i < 40; i = i + 2){
+    int i;
+    for (i = 0; i < 40; i = i + 2){
         if (c[i] != 'A' && c[i] != 'C' && c[i] != 'T' && c[i] != 'G' ){
             printf("Error: String could not be encoded");
             exit(5);
         }
     }
 
-    for (int i = 0; i < strlen(c);i++){
-	if (c[i] == c[i+1] || c[i+1] == '\0'){
+    for (i = 0; i < strlen(c);i++){
+	    if (c[i] == c[i+1] || c[i+1] == '\0'){
             count++;
         }
         if (c[i] != c[i+1] || c[i+1] == '\0'){
@@ -65,16 +66,16 @@ void encode(char c[]){
 }
 void decode(char c[]){
 
-    for (int i = 0; i < strlen(c); i = i + 2){
+    for (i = 0; i < strlen(c); i = i + 2){
         if ((c[i] != 'A' && c[i] != 'C' && c[i] != 'T' && c[i] != 'G' ) && ((int)(c[i+1])< 0 || (int)(c[i+1])> 9 )){
             printf("Error: String could not be decoded");
             exit(5);
         }
     }
 
-    for (int i = 0; i < strlen(c);i = i + 2){
+    for (i = 0; i < strlen(c);i = i + 2){
         int times = (int)(c[i+1]) - 48;
-	for (int j = 0; j < times;j++){
+	for (j = 0; j < times;j++){
 	    printf("%c", c[i]);
 	}
     }
