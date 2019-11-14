@@ -1,0 +1,34 @@
+Student (NetlinkID): zhangpaul1023
+
+Style Grade: 14/20
+
+
+Select Qualitative Feedback:
+===========================
+
+Formatting
+...
+
+
+
+Naming
+-1
+
+
+
+Commenting
+-5
+
+
+
+Functional Decomposition
+...
+
+
+
+General Qualitative Feedback from Teaching Team:
+===============================================
+
+No comments or documentation in code. 
+Use better variable names. better variable names should be used for anything substantial. 
+For example, "c" is not an appropriate variable name for the char array that his being decoded or encoded. 
